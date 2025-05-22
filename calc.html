@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .seven89{
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+        }
+        .four56{
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+        }
+        .one23{
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+        }
+        .zero{
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+        }
+        #input-field{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(255, 255, 255);
+            font-size: 30px;
+            text-align: right;
+            padding: 10px;
+        }
+
+        form{
+            padding: 60px;
+            border: 1px ridge black;
+            border-radius: 12px;
+            box-shadow: 12px 12px 40px rgba(0,0,0,0.4);
+            background-color: rgba(0,0,0,0.1);
+        }
+        .form-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        form button{
+            width: 50px;
+            height: 50px;
+            color: white;
+            background-color: rgb(103, 103, 216);
+            transition: 0.3s ease-in-out, transform 0.4s ease;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        form button:hover{
+            background-color: rgba(0,0,0,0.9);
+            transform: translateY(-2px);
+            cursor:pointer;
+        }
+        #DEL, #AC, #equals{
+            background-color: rgb(223, 73, 73);
+        }
+        #DEL:hover, #AC:hover, #equals:hover{
+            background-color: rgb(103, 103, 216);
+            transform: translateY(-2px);
+            cursor:pointer;
+        }
+
+        /*this is AI code*/
+        form button.pressed {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+    </style>
+</head>
+<body>  
+<div class="form-container">
+    <form action="#" method="post">
+        <p><input type="text" id="input-field" placeholder="0" readonly></p>
+        <p><div class="seven89">
+            <div class="7"><button type="button" id="btn7">7</button></div>
+            <div class="8"><button type="button" id="btn8">8</button></div>
+            <div class="9"><button type="button" id="btn9">9</button></div>
+            <div class="DEL"><button type="button" id="DEL">DEL</button></div>
+            <div class="AC"><button type="button" id="AC">AC</button></div>
+        </div></p>
+        <p><div class="four56">
+            <div class="4"><button type="button" id="btn4">4</button></div>
+            <div class="5"><button type="button" id="btn5">5</button></div>
+            <div class="6"><button type="button" id="btn6">6</button></div>
+            <div class="*"><button type="button" id="btnx">×</button></div>
+            <div class="/"><button type="button" id="btn÷">÷</button></div>
+        </div></p>
+
+        <p><div class="one23">
+            <div class="1"><button type="button" id="btn1">1</button></div>
+            <div class="2"><button type="button" id="btn2">2</button></div>
+            <div class="3"><button type="button" id="btn3">3</button></div>
+            <div class="+"><button type="button" id="btn+">+</button></div>
+            <div class="-"><button type="button" id="btn-">-</button></div>
+        </div></p>
+
+        <p><div class="zero">
+            <div class="0"><button type="button" id="btn0">0</button></div>
+            <div class="decimal"><button type="button" id="btn.">.</button></div>
+            <div class="powerx"><button type="button" id="powerx" onclick="construction()">x10<sup>x</sup></button></div>
+            <div class="ANS"><button type="button" id="ANS"onclick="construction()">ANS</button></div>
+            <div class="equals"><button type="button" id="equals">=</button></div>
+        </div></p>
+    </form>
+</div>
+
+<script>
+    // Get the input field
+    const inputField = document.getElementById("input-field");
+    
+    // Function to handle button clicks
+    function handleButtonClick(value) {
+        return function() {
+            inputField.value += value;
+        };
+    }
+    
+    // Add event listeners to all buttons
+
+    document.getElementById("btn7").addEventListener("click", handleButtonClick("7"));
+    document.getElementById("btn8").addEventListener("click", handleButtonClick("8"));
+    document.getElementById("btn9").addEventListener("click", handleButtonClick("9"));
+    document.getElementById("btn4").addEventListener("click", handleButtonClick("4"));
+    document.getElementById("btn5").addEventListener("click", handleButtonClick("5"));
+    document.getElementById("btn6").addEventListener("click", handleButtonClick("6"));
+    document.getElementById("btn1").addEventListener("click", handleButtonClick("1"));
+    document.getElementById("btn2").addEventListener("click", handleButtonClick("2"));
+    document.getElementById("btn3").addEventListener("click", handleButtonClick("3"));
+    document.getElementById("btn0").addEventListener("click", handleButtonClick("0"));
+    document.getElementById("btn.").addEventListener("click", handleButtonClick("."));
+    document.getElementById("btn+").addEventListener("click", handleButtonClick("+"));
+    document.getElementById("btn-").addEventListener("click", handleButtonClick("-"));
+    document.getElementById("btnx").addEventListener("click", handleButtonClick("×"));
+    document.getElementById("btn÷").addEventListener("click", handleButtonClick("÷"));
+    
+    // Clear button
+    document.getElementById("AC").addEventListener("click", function() {
+        inputField.value = "";
+    });
+    
+    // Delete button
+    document.getElementById("DEL").addEventListener("click", function() {
+        inputField.value = inputField.value.slice(0, -1);
+    });
+    
+    // Equals button (basic functionality)
+    document.getElementById("equals").addEventListener("click", function() {
+        try {
+            // Replace × and ÷ with * and / for evaluation
+            let expression = inputField.value.replace(/×/g, '*').replace(/÷/g, '/');
+            inputField.value = eval(expression);
+        } catch (e) {
+            inputField.value = "Error";
+        }
+    });
+
+    //for the buttons that i have not implemented yet
+    function construction(){
+    alert("Button under construction")
+}
+
+// these are AI codes to improve y code
+
+document.addEventListener('keydown', function(event) {
+    const key = event.key;
+    const keyMap = {
+        '1': 'btn1', '2': 'btn2', '3': 'btn3', '4': 'btn4', '5': 'btn5',
+        '6': 'btn6', '7': 'btn7', '8': 'btn8', '9': 'btn9', '0': 'btn0',
+        '+': 'btn+', '-': 'btn-', '*': 'btnx', '/': 'btn÷', '.': 'btn.',
+        'Enter': 'equals', '=': 'equals', 'Backspace': 'DEL', 'Delete': 'AC',
+        'Escape': 'AC'
+    };
+
+    if (keyMap[key]) {
+        const button = document.getElementById(keyMap[key]);
+        
+        // 1. Add a "pressed" class to simulate hover/active state
+        button.classList.add('pressed');
+        
+        // 2. Trigger the button click
+        button.click();
+        
+        // 3. Remove the "pressed" class after 200ms (for visual feedback)
+        setTimeout(() => {
+            button.classList.remove('pressed');
+        }, 200);
+    }
+});
+
+
+</script>
+</body>
+</html>

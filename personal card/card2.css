@@ -1,0 +1,154 @@
+*{
+            margin:0;
+            box-sizing: border-box;
+            padding: 0%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card-container{
+            display: flex;
+            gap: 30px;
+            height: 600px;
+            width: 60%;
+        }
+        @media (max-width: 768px){
+            .card-container{
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                align-items: stretch;
+            }
+        
+        }
+        @media (min-width: 1080px) {
+            .card-container{
+                width: 800px;
+            }
+        }
+        .front{
+            padding: 30px;
+            margin: 10px;
+            flex: 3;          
+            height: auto;  
+            background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("front3.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 15px;
+            color: rgb(0, 0, 0);
+            box-shadow: 15px 15px 20px rgba(0,0,0,0.6) ;
+            position:relative;
+            transition: 0.4s ease-in-out, transform 0.4s ease-in-out;
+        }
+        .front:hover{
+            transform: translatey(-4px)
+        }
+        .front .logo{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            top: 0px;
+            width: 100%;
+        }
+
+        .logo img{
+            margin-top:0;
+            height: 50px; 
+            
+        }
+        .logo p{            
+            font-size: 2rem;
+            font-weight: bolder;
+            padding: 10px;
+            font-family:monospace;
+        }
+        .front .comp-name{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .img img{
+            border-radius: 50px;
+        }
+        .details{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .name-role{
+            margin-bottom: 30px;
+        }
+        .identity{
+            margin-bottom: 30px;
+        }
+        .barcode{
+            bottom:0;
+            margin-top: 30px;
+            position:sticky;
+            
+        }
+        body{
+            background-color: rgb(197, 191, 191);
+        }
+
+        .back{
+            padding: 30px;
+            margin: 10px;
+            flex: 3;
+            background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("back2.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 15px;
+            box-shadow: 15px 15px 20px rgba(0,0,0,0.6) ;
+             position: relative;
+             transition: 0.4s ease-in-out, transform 0.4s ease-in-out;
+        }
+        .back:hover{
+            transform: translatey(-4px)
+        }
+        .back .scan{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .back .alert{
+            margin-top: 60px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            
+        }
+        .back .logo{
+            position: absolute;
+            bottom: 0px;
+            right: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .back .logo img{
+            height: 30px;
+        }
+        .back .logo p{
+            font-size: 20px;
+        }

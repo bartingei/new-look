@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: rgb(233, 1, 1);
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            position: sticky;
+            backdrop-filter: blur(8px);
+            
+        }
+        li{
+            list-style-type: none;
+        }
+        a{
+            color: goldenrod;
+            text-decoration: none;
+            padding: 30px;
+            transition: .3s ease-in-out;
+        }
+       
+        nav,li{ 
+            float:right;          
+            padding: 5px;
+        }
+
+        .welcome{
+            background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url("bootay.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height:100vh;
+            width:100%;
+            border-bottom-right-radius: 350px;
+        }
+        .welcome2{
+            background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,1)),url("bend.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height:100vh;
+            width:100%;
+            border-bottom-right-radius: 350px;
+            border-top-left-radius: 300px;
+        }
+        .welcome3{
+            background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.1)),url("booty.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height:100vh;
+            width:100%;
+            border-top-right-radius:400px;
+        }
+
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        button{
+            border-radius: 20px;
+            height: 30px;
+            background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+            transition: .3s ease-in-out;
+            box-shadow: 7px 18px 18px rgb(68, 67, 67);
+
+        }
+        button:hover{
+           background-color: rgb(0, 0, 0);
+           transform: translateY(-5px);
+        }
+        fieldset{
+            padding: 40px;
+            border-radius: 20px;
+            border-color: black;
+            box-shadow: 15px 20px 20px rgb(68, 67, 67) ;
+            transition: .7s ease-in-out;
+        }
+        fieldset:hover{
+            transform: translateY(-5px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="welcome">
+        <fieldset>
+            <form action="#" method="post">
+                <h1 style="color: rgb(255, 183, 2);">Are you 18 years or older?</h1>
+                <div class="buttons">
+                    <button ><a href="stars.html">Yes, Enter</a></button>
+                    <button><a href="stars.html">No, Exit</a></button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <div class="welcome2">
+        
+    </div>
+    <div class="welcome3">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            position: fixed;
+            padding:15px;
+            
+        }
+      li{
+            list-style-type: none;
+        }
+        nav a{
+            color: goldenrod;
+            text-decoration: none;
+            padding: 30px;
+            transition: .3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        nav ul{ 
+            display: flex;
+            gap: 10px;
+        }
+        .starimg{
+            background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url("bootay.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 55px;
+
+        }
+        .stars{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: stretch;
+            background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.9));
+            height: auto;     
+            gap: 30px;
+        }
+        .stars a{
+            color:rgb(17, 17, 17);
+        }
+        .pstars1{
+                flex:1;
+                margin: 30px;
+                box-shadow:  12px 10px 10px rgba(0,0,0,0.5);
+                padding: 20px;
+                justify-content: center;
+                display: grid;
+                border-radius: 25px;
+                background: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+                transition: background-color 0.3s ease-in-out, transform  0.3s ease-in;
+            }
+        .pstars1:hover{
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-5px);
+        }
+        .pstars1 img{
+            border-radius: 20px;
+           
+        }
+        .pstars2{
+                flex:1;
+                margin: 30px;
+                box-shadow:  12px 10px 10px rgba(0,0,0,0.5);
+                padding: 20px;
+                justify-content: center;
+                display: grid;
+                border-radius: 25px;
+                background: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+                transition: background-color 0.3s ease-in-out, transform  0.3s ease-in;
+            }
+        .pstars2:hover{
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-5px);
+        }
+        .pstars2 img{
+            border-radius: 20px;
+           
+        }
+        .pstars3{
+                flex:1;
+                margin: 30px;
+                box-shadow: 13px 10px 10px rgba(0,0,0,0.5);
+                padding: 20px;
+                justify-content: center;
+                display: grid;
+                border-radius: 25px;
+                background-color: rgba(255, 255, 255, 0.3);
+                transition: background-color 0.3s ease-in-out, transform  0.3s ease-in;
+            }
+        .pstars3:hover{
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-5px);
+        }
+        .pstars3 img{
+            border-radius: 20px;
+           
+        }
+        .pstars4{
+                flex:1;
+                margin: 30px;
+                box-shadow: 13px 10px 10px rgba(0,0,0,0.5);
+                padding: 20px;
+                justify-content: center;
+                display: grid;
+                border-radius: 25px;
+                background: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+                transition: background-color 0.3s ease-in-out, transform  0.3s ease-in;
+            }
+       .pstars4:hover{
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-5px);
+        }
+        .pstars4 img{
+            border-radius: 20px;
+           
+        }
+        .pstars5{
+                flex:1;
+                margin: 30px;
+                box-shadow: 13px 10px 10px rgba(0,0,0,0.5);
+                padding: 20px;
+                justify-content: center;
+                display: grid;
+                border-radius: 25px;
+                background: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+                transition: background-color 0.3s ease-in-out, transform  0.3s ease-in;
+            }
+        .pstars5:hover{
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-5px);
+        }
+        .pstars5 img{
+            border-radius: 20px;
+           
+        }
+        .pstars6{
+                flex:1;
+                margin: 30px;
+                box-shadow: 13px 10px 10px rgba(0,0,0,0.5);
+                padding: 20px;
+                justify-content: center;
+                display: grid;
+                border-radius: 25px;
+                background: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+                transition: background-color 0.3s ease-in-out, transform  0.3s ease-in;
+            }
+        .pstars6:hover{
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-5px);
+        }
+        .pstars6 img{
+            border-radius: 20px;
+           
+        }
+        .pstars7{
+                flex:1;
+                margin: 30px;
+                box-shadow: 13px 10px 10px rgba(0,0,0,0.5);
+                padding: 20px;
+                justify-content: center;
+                display: grid;
+                border-radius: 25px;
+                background: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+                transition: background-color 0.3s ease-in-out, transform  0.3s ease-in;
+            }
+        .pstars7:hover{
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-5px);
+        }
+        .pstars7 img{
+            border-radius: 20px;
+           
+        }
+        .pstars8{
+                flex:1;
+                margin: 30px;
+                box-shadow: 13px 10px 10px rgba(0,0,0,0.5);
+                padding: 20px;
+                justify-content: center;
+                display: grid;
+                border-radius: 25px;
+                background: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+                transition: background-color 0.3s ease-in-out, transform  0.3s ease-in;
+            }
+        .pstars8:hover{
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-5px);
+        }
+        .pstars8 img{
+            border-radius: 20px;
+           
+        }
+        @media(max-width:768px){
+            .stars{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height:auto;
+            }
+            .pstars1{
+                flex:1;
+                margin: 30px;
+            }
+        }
+        .headerz{
+            background-color: rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <nav>
+            <h1 style="color: rgb(255, 183, 2);"><a href="marsh.htm">HUBz</a></h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Enquire</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="starimg">
+        <h1 id="heading" style="color: rgb(255, 183, 2);;">Welcome Home Gooners 💦</h1>
+        <p style="color: azure;"> ~ No job is better than a blow job ~ </p>
+    </div>
+    <div class="headerz" >
+        <h2 style="color: rgb(255, 255, 255); text-align: center;">Todays top performers</h2>
+    </div>
+    <div class="stars">        
+        <div class="pstars1" class="pst">
+            <figure>
+                <img src="star1.jpg" alt="" height="300px">
+                <figcaption>
+                    <h2><a href="#">Brianna</a></h2>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="pstars2">
+            <img src="star2.jpg" alt="" height="270px">
+            <figcaption>
+                <h2><a href="#">Camilla</a></h2>
+            </figcaption>
+        </figure>
+        </div>
+        <div class="pstars3">
+            <img src="star3.jpg" alt="" height="300px">
+            <figcaption>
+                <h2><a href="#">Angela</a></h2>
+            </figcaption>
+        </figure>
+        </div>
+        <div class="pstars4">
+            <img src="star4.jpg" alt="" height="300px">
+            <figcaption>
+                <h2><a href="#">Natalia</a></h2>
+            </figcaption>
+        </figure>
+        </div>
+        <div class="pstars5">
+            <img src="star5.jpg" alt="" height="300px">
+            <figcaption>
+                <h2><a href="#">Destiny</a></h2>
+            </figcaption>
+        </figure>
+        </div>
+        <div class="pstars6">
+            <img src="star6.jpg" alt="star5" height="300px">
+            <figcaption>
+                <h2><a href="#">Alexis</a></h2>
+            </figcaption>
+        </figure>
+        </div>
+        <div class="pstars7">
+            <img src="star7.jpg" alt="star5" height="300px">
+            <figcaption>
+                <h2><a href="#">Alexis</a></h2>
+            </figcaption>
+        </figure>
+        </div>
+        <div class="pstars8">
+            <img src="star8.jpg" alt="star5" height="300px">
+            <figcaption>
+                <h2><a href="#">Alexis</a></h2>
+            </figcaption>
+        </figure>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

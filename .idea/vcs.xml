@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DBMS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OOP II" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OOP II/broCode" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OOP II/brocode4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web sites" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web/Website/hotel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web/Website/loginAI.html/supermarket" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web/assignment" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web/web-dev-journey" vcs="Git" />
+  </component>
+</project>
